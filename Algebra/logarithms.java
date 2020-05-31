@@ -1,4 +1,3 @@
-package Algebra;
 
 
 import java.util.InputMismatchException;
@@ -24,6 +23,8 @@ public class logarithms {
     
 public static void main(String[] args) {
     
+    
+
     try{
         Scanner scan = new Scanner (System.in);
     
