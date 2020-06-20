@@ -2,8 +2,8 @@ package Calculus;
 
 import java.util.*;
 
- class BinaryToDecimalConversion extends CalculusMain{
-    public static int binaryToDecimalConversion(int binary){
+public class BinaryToDecimalConversion implements Calculus{
+    public int binaryToDecimalConversion(int binary){
         int decimal=0,digit=1;
         while(binary>0){
             decimal+=digit*(binary%10);
@@ -15,12 +15,11 @@ import java.util.*;
     }
 
 
-    protected void error() {
+    public void error() {
 		System.err.println("Please provide only numbers (no text). Restart the program and try again!");
-		  main(new String[0]);
 	}
 
-	protected void calculus() {
+	public void calculus() {
 		Scanner scan = new Scanner (System.in);
 		
 		System.out.println("Please input a binary number to convert...");

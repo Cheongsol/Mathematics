@@ -5,9 +5,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class DecimalToBinaryConversion extends CalculusMain {
+public class DecimalToBinaryConversion implements Calculus {
 	
-    public static ArrayList<Integer> decimalToBinary(int decimal){
+    public ArrayList<Integer> decimalToBinary(int decimal){
         ArrayList<Integer> binary =new ArrayList<>();
         while(decimal>0){
             binary.add(0,decimal%2);
@@ -16,14 +16,14 @@ public class DecimalToBinaryConversion extends CalculusMain {
         return binary;
     }
     
-    public static void printBinary(ArrayList<Integer> binary){
+    public void printBinary(ArrayList<Integer> binary){
         for(int i:binary)
             System.out.print(i);
         System.out.println("");
     }
 
 	@Override
-	protected void calculus() {
+	public void calculus() {
 		Scanner scan = new Scanner (System.in);
 	    
 	    System.out.println("Please input a decimal number to convert...");
@@ -35,8 +35,7 @@ public class DecimalToBinaryConversion extends CalculusMain {
 	}
 
 	@Override
-	protected void error() {
+	public void error() {
 		System.err.println("Please provide only numbers (no text). Restart the program and try again!");
-	    main(new String[0]);
-	}   
+	}
 }
