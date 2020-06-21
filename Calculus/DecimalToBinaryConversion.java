@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class DecimalToBinaryConversion implements Calculus {
 	
-    public ArrayList<Integer> decimalToBinary(int decimal){
+    private ArrayList<Integer> decimalToBinary(int decimal){
         ArrayList<Integer> binary =new ArrayList<>();
         while(decimal>0){
             binary.add(0,decimal%2);

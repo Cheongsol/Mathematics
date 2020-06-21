@@ -3,7 +3,18 @@ package Calculus;
 import java.util.*;
 
 public class BinaryToDecimalConversion implements Calculus{
-    public int binaryToDecimalConversion(int binary){
+	
+	protected boolean binaryIsValid(String binary){
+        boolean binaryIsValid = binary.matches("[01]+") && !binary.startsWith("0");
+		if (binaryIsValid) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+	
+    private int binaryToDecimalConversion(int binary){
         int decimal=0,digit=1;
         while(binary>0){
             decimal+=digit*(binary%10);
@@ -23,9 +34,13 @@ public class BinaryToDecimalConversion implements Calculus{
 		Scanner scan = new Scanner (System.in);
 		
 		System.out.println("Please input a binary number to convert...");
-		int numToConvert = scan.nextInt();
-		int convertedNum=binaryToDecimalConversion(numToConvert);
-		System.out.println("Binary number: "+numToConvert + " is equal to decimal number: "+ convertedNum );
+		String binary = scan.nextLine();
+		int convertedNum;
+		if (binaryIsValid(binary)){
+			int numToConvert = Integer.parseInt(binary);
+			convertedNum=binaryToDecimalConversion(numToConvert);
+			System.out.println("Binary number: "+binary + " is equal to decimal number: "+ convertedNum );
+        }
 	}   
 
 }
