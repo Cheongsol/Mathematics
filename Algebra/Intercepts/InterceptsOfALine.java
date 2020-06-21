@@ -21,7 +21,7 @@ public class InterceptsOfALine {
 		case 4: vertical(); break;
 		default: System.out.println("Invalid Choice.\nExiting");
 		}
-		scan.close();
+		//scan.close();
 	}
 	
 	public void prepare() {
