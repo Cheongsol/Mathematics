@@ -7,14 +7,14 @@ import java.util.Scanner;
  * @author Savvas Theofilou
  * credits: @petridisa
  */
-public class BinaryToHexadecimalConversion extends CalculusMain{
+public class BinaryToHexadecimalConversion implements Calculus{
     
     /**
      * Checks if number is binary or contains leading zeros
      * @param binary number
      * @return true if valid, false if not
      */
-    public static boolean binaryIsValid(String binary){
+    protected boolean binaryIsValid(String binary){
         boolean binaryIsValid = binary.matches("[01]+") && !binary.startsWith("0");
 		if (binaryIsValid) {
             return true;
@@ -29,7 +29,7 @@ public class BinaryToHexadecimalConversion extends CalculusMain{
      * @param binary number 
      * @return hexadecimal number
      */
-    public static String binToHex(String binary){
+    protected static String binToHex(String binary){
         if ((binary.equals("0")) || (binary.equals("00")) || (binary.equals("000")) || (binary.equals("0000"))){
             return "0";
         }
@@ -85,7 +85,7 @@ public class BinaryToHexadecimalConversion extends CalculusMain{
      * @param binary number
      * @return ArrayList<String> containing 4bit numbers
      */
-    private static ArrayList<String> divideByFourBits(String binary) {
+    protected static ArrayList<String> divideByFourBits(String binary) {
         ArrayList<String> partsOfString=new ArrayList<>();
         int lengthOfBinary=binary.length();
         
@@ -100,12 +100,11 @@ public class BinaryToHexadecimalConversion extends CalculusMain{
      * Main method
      * @param args 
      */
-	protected void error() {
+	public void error() {
 		System.err.println("Please provide a valid binary number. Restart the program and try again!");
-		main(new String[0]);
 	}
 
-	protected void calculus() {
+	public void calculus() {
 		Scanner scanner=new Scanner(System.in);
         String binaryNumber;
         
