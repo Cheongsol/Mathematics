@@ -9,6 +9,7 @@ public class TestIntercepts {
 	InterceptsOfALine testIntercepts = new InterceptsOfALine();
 	InterceptsOfALine testPoint = new InterceptsOfALine();
 	InterceptsOfALine testSlope = new InterceptsOfALine();
+	InterceptsOfALine testVertical = new InterceptsOfALine();
 	
 	@Test
 	public void testInterceptsOfALine() {
@@ -23,5 +24,10 @@ public class TestIntercepts {
 	@Test
 	public void testSlopeInterceptForm() {
 		testSlope.main(null);
+	}
+	
+	@Test
+	public void testVertical() {
+		testVertical.main(null);
 	}
 }
