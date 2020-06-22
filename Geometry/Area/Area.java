@@ -27,7 +27,8 @@ public class Area{
 			case 2 : area = circle(); break;
 			case 3 : area = triangle(); break;
 			case 4 : area = square(); break;
-			case 5 : area = parallelogram(); break;
+			case 5 : area
+			= parallelogram(); break;
 			default: System.out.println("Invalid Choice.\n Exiting");
 		}
 
@@ -44,11 +45,11 @@ public class Area{
 		Scanner scan = new Scanner(System.in);
 		//Prompt user for  height
 		System.out.println("What is the height of the rectangle?\t");
-		double h = scan.nextDouble();
+		double height = scan.nextDouble();
 		//Prompt user for  width
 		System.out.println("What is the width of the rectangle?\t");
-		double w = scan.nextDouble();
-    		return h*w;
+		double width = scan.nextDouble();
+    		return height*width;
   	}
 
  	public static double circle(){
