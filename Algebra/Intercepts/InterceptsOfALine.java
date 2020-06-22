@@ -30,7 +30,6 @@ public class InterceptsOfALine {
 		*/
 		}
 		choice.doAll();
-		scan.close();
 	}
 
 	public void prepare() {
